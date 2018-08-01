@@ -1,2 +1,2 @@
-# roboarm-auto
-Raspberry Pi to control a robot arm.
+# Roboarm Auto
+Automatic script on a Raspberry Pi to move a robot arm.
