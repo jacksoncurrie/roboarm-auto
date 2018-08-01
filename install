@@ -1,0 +1,47 @@
+#!/bin/bash
+# All commands for installing Roboarm
+
+echo "==============================="
+echo "     Installing Node.js"
+echo "==============================="
+
+sudo apt update
+sudo apt upgrade
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install -y nodejs
+
+echo "==============================="
+echo "      Installing PIGPIO"
+echo "==============================="
+
+cd PIGPIO
+make
+sudo make install
+
+echo "==============================="
+echo " Installing node dependencies"
+echo "==============================="
+
+cd ..
+sudo npm i
+forever-service install myService
+
+echo "==============================="
+echo "   Adding service to boot"
+echo "==============================="
+
+sudo echo "#!/bin/sh" > /etc/rc.local
+sudo echo "# This starts on boot" >> /etc/rc.local
+sudo echo "sudo service myService start" >> /etc/rc.local
+sudo echo "exit 0" >> /etc/rc.local
+
+echo "==============================="
+echo "      Starting service"
+echo "==============================="
+
+sudo service myService start
+
+echo "==============================="
+echo "      Install Complete"
+echo "   Your Roboarm is running"
+echo "==============================="
