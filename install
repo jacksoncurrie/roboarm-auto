@@ -1,5 +1,5 @@
 #!/bin/bash
-# All commands for installing Roboarm
+# All commands for installing Roboarm Auto
 
 echo "==============================="
 echo "     Installing Node.js"
