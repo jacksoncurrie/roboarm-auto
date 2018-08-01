@@ -1,0 +1,25 @@
+{
+  "name": "roboarm-auto",
+  "version": "1.0.0",
+  "description": "Controlling a robot with a Raspberry Pi",
+  "main": "app.js",
+  "scripts": {
+    "start": "sudo node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jacksoncurrie@github.com/jacksoncurrie/roboarm-auto"
+  },
+  "keywords": [
+    "robot",
+    "roboarm",
+    "rapsberry",
+    "pi"
+  ],
+  "author": "Jackson Currie",
+  "license": "ISC",
+  "homepage": "https://github.com/jacksoncurrie/roboarm-auto#readme",
+  "dependencies": {
+    "pigpio": "^1.1.1"
+  }
+}
