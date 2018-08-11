@@ -22,13 +22,14 @@ var moveServo = (servo, position, final, callback) => {
             moveServo(servo, position, final, callback),
             10
         );
-    } else {
+
+    // When complete
+    } else
         callback();
-    }
 }
 
 // Start automation of arm
-var automate = () => {
+var automate = () =>
 
     // Moves the servos
     moveServo(rot, 1450, 2360, () =>
@@ -59,4 +60,5 @@ var automate = () => {
     moveServo(rot, 2360, 1450, () =>
     automate()
     ))))))))))))))))))))))))));
-}
+
+automate();
